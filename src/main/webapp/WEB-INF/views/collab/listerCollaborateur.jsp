@@ -31,7 +31,7 @@
 </header>
 
 <body class="ui container-fluid">
-  <a href="creer-collab.html" role = "button" class="btn btn-primary" style='float:right;'>Ajouter un nouveau collaborateur</a>
+  <a href="creer" role = "button" class="btn btn-primary" style='float:right;'>Ajouter un nouveau collaborateur</a>
   <h1 class="ui header">Les collaborateurs</h1>
   <div class="d-flex flex-row flex-wrap">
     <div class="p-2">
@@ -72,24 +72,25 @@
   </p>
 </form>
   <br />
-  <br />
+  
+	<div class="container-fluid float-center">
+		<div class="d-flex flex-row flex-wrap">
  <%
 			List<Collaborateur> collabs = (List<Collaborateur>)request.getAttribute("listeNoms");
 			for(Collaborateur collab : collabs){
 		%>
-	<div class="container-fluid float-center">
-		<div class="d-flex flex-row flex-wrap">
-				<div class="card col-xs-12 col-sm-6 col-lg-4 p-0">
+			<div class="col-xs-12 col-sm-6 col-lg-4 p-2 d-flex">
+				<div class="card" height="100%">
 					<h5 class="card-header"><%=collab.getNom().toUpperCase()%>
 						<%=collab.getPrenom()%></h5>
 					<div class="card-body">
 						<div class="d-flex flex-row flex-wrap">
-							<div class="col-xs-12 col-sm-6 p-0">
+							<div class="col-xs-12 col-sm-5 p-0">
 								<img class="figure-img img-fluid round" width=200px
 									src="https://image.freepik.com/free-icon/question-mark_318-52837.jpg"
 									alt="Generic placeholder image">
 							</div>
-							<div class="col-xs-12 col-sm-6 p-0">
+							<div class="col-xs-12 col-sm-7 p-0">
 								<p class="card-text">
 									Date de naissance :
 									<%=collab.getDateDeNaissance()%></p>
@@ -107,10 +108,14 @@
 						</div>
 					</div>
 				</div>
-		
-			<%
+			</div>
+		<%
 			}
 		%>
+			</div>
+			</div>
+		
+
 		
 </body>
 </html>
