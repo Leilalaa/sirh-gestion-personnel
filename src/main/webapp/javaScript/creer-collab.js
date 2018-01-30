@@ -14,10 +14,18 @@ $(document).ready(function() {
 				$('#confirmation').modal('show');
 			}
 		})
+		
+		$('#nommodal').text("Nom : "+$('#nom').val());
+		$('#prenommodal').text("Prenom : "+$('#prenom').val());
+		$('#datemodal').text("Date : "+$('#date').val());
+		$('#adressemodal').text("Adresse : "+$('#adresse').val());
+		$('#secumodal').text("Numero de securite sociale : "+$('#secu').val());
 	});
 	
 	 $('#bouton').click(function(){
 		    $('#formulaire').submit();
 		  });
+	 
+	 
 
 });

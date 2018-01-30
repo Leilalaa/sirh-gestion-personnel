@@ -82,7 +82,7 @@
       <div class="form-group row col-10">
         <label for="secu" class="col-sm-2 col-form-label">Numéro de sécurité sociale</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control" id="secu" name="secu" required>
+          <input type="text" class="form-control" id="secu" name="numSecu" required>
           <div class="invalid-feedback">
             Le numéro de sécurité sociale est obligatoire.
           </div>
@@ -102,20 +102,20 @@
               </div>
               <div class="modal-body">
                 Vous êtes sur le point de créer un nouveau collaborateur.
-                <div class = "row col-10">
-                  Nom : 
+                <div class = "row col-10" id="nommodal">
+                  
                 </div>
-                <div class = "row col-10">
-                 Prénom : 
+                <div class = "row col-10" id="prenommodal">
+          
                 </div>
-                <div class = "row col-10">
-                Date de naissance : 
+                <div class = "row col-10" id="datemodal">
+          
                 </div>
-                <div class = "row col-10">
-                  Adresse :  
+                <div class = "row col-10" id="adressemodal">
+               
                 </div>
-                <div class = "row col-10">
-                 Numéro de sécurité sociale :  
+                <div class = "row col-10" id="secumodal">
+              
                 </div>
 
               </div>

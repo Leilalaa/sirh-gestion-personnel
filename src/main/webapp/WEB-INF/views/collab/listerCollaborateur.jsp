@@ -77,33 +77,40 @@
 			List<Collaborateur> collabs = (List<Collaborateur>)request.getAttribute("listeNoms");
 			for(Collaborateur collab : collabs){
 		%>
-<div class="container-fluid float-center">
-<div class="d-flex flex-row flex-wrap">
-  <div class="col-sm-4">
-    <div class="card">
-      <h5 class="card-header"><%= collab.getNom().toUpperCase()%> <%= collab.getPrenom()%></h5>
-      <div class="card-body">
-      <div class="d-flex flex-row flex-wrap">
-        <div class="col-sm-4">
-           <img class="figure-img img-fluid round" width=200px src="https://image.freepik.com/free-icon/question-mark_318-52837.jpg" alt="Generic placeholder image">
-        </div>
-        <div class="col-sm-4">
-          <p class="card-text">Date de naissance : <%= collab.getDateDeNaissance()%></p>
-          <p class="card-text">Adresse : <%= collab.getAdresse()%></p>
-          <p class="card-text">Numéro de sécurité sociale : <%= collab.getNumSecu()%></p>
-        </div>
-        <div class="col-sm-4">
+	<div class="container-fluid float-center">
+		<div class="d-flex flex-row flex-wrap">
+				<div class="card col-xs-12 col-sm-6 col-lg-4 p-0">
+					<h5 class="card-header"><%=collab.getNom().toUpperCase()%>
+						<%=collab.getPrenom()%></h5>
+					<div class="card-body">
+						<div class="d-flex flex-row flex-wrap">
+							<div class="col-xs-12 col-sm-6 p-0">
+								<img class="figure-img img-fluid round" width=200px
+									src="https://image.freepik.com/free-icon/question-mark_318-52837.jpg"
+									alt="Generic placeholder image">
+							</div>
+							<div class="col-xs-12 col-sm-6 p-0">
+								<p class="card-text">
+									Date de naissance :
+									<%=collab.getDateDeNaissance()%></p>
+								<p class="card-text">
+									Adresse :
+									<%=collab.getAdresse()%></p>
+								<p class="card-text">
+									Numéro de sécurité sociale :
+									<%=collab.getNumSecu()%></p>
+							</div>
 
-        </div>
-      </div>
-        <div class="d-flex flex-row flex-wrap float-right">
-          <a href="#" class="btn btn-primary" align="right">Editer</a>
-      </div>
-      </div>
-    </div>
-  </div>
- <%
+						</div>
+						<div class="d-flex flex-row flex-wrap float-right">
+							<a href="#" class="btn btn-primary" align="right">Editer</a>
+						</div>
+					</div>
+				</div>
+		
+			<%
 			}
 		%>
+		
 </body>
 </html>
